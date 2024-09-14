@@ -36,6 +36,6 @@ console.log('App is connected to Database')
 .catch((error)=>{
     console.log(error)
 })
-app.listen(4000, ()=>{
+app.listen( ()=>{
     console.log('Server is running')
 })
