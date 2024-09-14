@@ -38,7 +38,7 @@ const data = {
     ratings
 }
 setLoading(true)
-axios.put(`http://localhost:3000/books/${id}`,data)
+axios.put(`https://bookstore5.onrender.com/books/${id}`,data)
 .then (()=>{
     setLoading(false)
     Navigate('/')
