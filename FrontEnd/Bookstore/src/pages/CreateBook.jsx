@@ -21,7 +21,7 @@ const data = {
     ratings
 }
 setLoading(true)
-axios.post('https://bookstore5.onrender.com/books',data)
+axios.post('https://bookstoreg.onrender.com/books',data)
 .then (()=>{
     setLoading(false)
     Navigate('/')
