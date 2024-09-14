@@ -11,7 +11,7 @@ const {id} = useParams()
 
 useEffect(()=>{
     setLoading(true)
-    axios.get(`https://bookstore5.onrender.com/${id}`)
+    axios.get(`https://bookstoreg.onrender.com/${id}`)
     .then((response)=>{
         setBook(response.data);
         setLoading(false)
