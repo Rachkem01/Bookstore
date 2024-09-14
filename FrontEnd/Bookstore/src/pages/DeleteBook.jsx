@@ -9,7 +9,7 @@ const DeleteBook = () => {
     const {id}= useParams()
     const handleDeleteBook = ()=>{
         setLoading(true)
-        axios.delete(`http://localhost:3000/books/${id}`)
+        axios.delete(`https://bookstore-backend-azeu.onrender.com/books/${id}`)
         .then(()=>
         {  
             setLoading(false)
