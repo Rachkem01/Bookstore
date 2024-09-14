@@ -17,7 +17,7 @@ const EditBook = () => {
 
   useEffect(()=>{
     setLoading(true)
-    axios.get(`https://bookstore5.onrender.com/books/${id}`)
+    axios.get(`https://bookstoreg.onrender.com/books/${id}`)
     .then((response)=>{
         setAuthor(response.data.author)
         setName(response.data.name)
@@ -38,7 +38,7 @@ const data = {
     ratings
 }
 setLoading(true)
-axios.put(`https://bookstore5.onrender.com/books/${id}`,data)
+axios.put(`https://bookstoreg.onrender.com/books/${id}`,data)
 .then (()=>{
     setLoading(false)
     Navigate('/')
