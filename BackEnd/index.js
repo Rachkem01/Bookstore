@@ -9,6 +9,7 @@ const app = express();
 //middleware for parsing request body
 app.use(express.json())
 
+    const port = process.env.PORT || 4000
 
 //middleware for handling cors policy
 //option 1: Allow All origin with default cors (*)
@@ -36,6 +37,6 @@ console.log('App is connected to Database')
 .catch((error)=>{
     console.log(error)
 })
-app.listen( ()=>{
+app.listen(port ()=>{
     console.log('Server is running')
 })
