@@ -37,6 +37,6 @@ console.log('App is connected to Database')
 .catch((error)=>{
     console.log(error)
 })
-app.listen(port ()=>{
+app.listen(port, ()=>{
     console.log('Server is running')
 })
