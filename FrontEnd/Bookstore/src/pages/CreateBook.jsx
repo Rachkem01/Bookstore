@@ -21,7 +21,7 @@ const data = {
     ratings
 }
 setLoading(true)
-axios.post('http://localhost:4000/books',data)
+axios.post('https://bookstorebackend2.onrender.com0/books',data)
 .then (()=>{
     setLoading(false)
     Navigate('/')
