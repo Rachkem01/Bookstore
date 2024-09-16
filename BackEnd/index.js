@@ -9,7 +9,7 @@ const app = express();
 //middleware for parsing request body
 app.use(express.json())
 
-    const port = process.env.PORT 
+    const port = process.env.PORT || 4000
 
 //middleware for handling cors policy
 //option 1: Allow All origin with default cors (*)
@@ -30,10 +30,8 @@ app.get('/', (req, res)=>{
 app.use('/books', bookroutes)
 
 //connect databses
-mongoose.connect('mongodb://127.0.0.1:27017')
-.then(()=>{
-console.log('App is connected to Database')
-})
+const MONGODB_URI = process.env.MONGODB_URI ||'mongodb://127.0.0.1:27017';
+'mongodb://127.0.0.1:27017'
 .catch((error)=>{
     console.log(error)
 })
