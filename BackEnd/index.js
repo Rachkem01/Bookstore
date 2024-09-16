@@ -9,7 +9,7 @@ const app = express();
 //middleware for parsing request body
 app.use(express.json())
 
-    const port = process.env.PORT || 4000
+    const port = process.env.PORT 
 
 //middleware for handling cors policy
 //option 1: Allow All origin with default cors (*)
