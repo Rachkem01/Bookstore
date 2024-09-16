@@ -30,11 +30,17 @@ app.get('/', (req, res)=>{
 app.use('/books', bookroutes)
 
 //connect databses
-const MONGODB_URI = process.env.MONGODB_URI ||'mongodb://127.0.0.1:27017';
-'mongodb://127.0.0.1:27017'
-.catch((error)=>{
-    console.log(error)
+
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017';
+
+mongoose.connect(MONGODB_URI, { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true 
 })
+.then(() => console.log("Database connected successfully"))
+.catch(err => console.log("Database connection error:", err));
+
+
 app.listen(port, ()=>{
     console.log('Server is running')
 })
